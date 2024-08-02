@@ -1,0 +1,60 @@
+1: # Test_input.txt <new custom string> 
+2: <new custom string> 
+3: This Is A Test Input File <new custom string> 
+4: For The Processing Funct <new custom string> 
+5: Ions. <new custom string> 
+6: <new custom string> 
+7: Lines With Various Charac <new custom string> 
+8: Ters, Numbers, And Symbol <new custom string> 
+9: S. <new custom string> 
+10: <new custom string> 
+11: Some Examples: <new custom string> 
+12: <new custom string> 
+13: 1. Line With Special Char <new custom string> 
+14: Acters: !@#$%^&*() <new custom string> 
+15: 2. Line With Numbers: 123 <new custom string> 
+16: 4567890 <new custom string> 
+17: 3. Line With Mixed Conten <new custom string> 
+18: T: Abcd123!@#$ <new custom string> 
+19: <new custom string> 
+20: Testing Edge Cases And Di <new custom string> 
+21: Fferent Scenarios: <new custom string> 
+22: <new custom string> 
+23: 4. Line With Stop Words: <new custom string> 
+24: A An The And Or (should B <new custom string> 
+25: E Removed) <new custom string> 
+26: 5. Empty Line (should Not <new custom string> 
+27: Affect The Result) <new custom string> 
+28: <new custom string> 
+29: Testing Capitalize Functi <new custom string> 
+30: On: <new custom string> 
+31: <new custom string> 
+32: 6. Lowercase Words Should <new custom string> 
+33: Be Capitalized <new custom string> 
+34: 7. Words In Uppercase Sho <new custom string> 
+35: Uld Stay The Same <new custom string> 
+36: 8. Mixed Case Words <new custom string> 
+37: <new custom string> 
+38: Testing Fetch_geo_ip Func <new custom string> 
+39: Tion: <new custom string> 
+40: <new custom string> 
+41: 9. Ip: 8.8.8.8 (google's <new custom string> 
+42: Public Dns) <new custom string> 
+43: 10. Ip: 1.1.1.1 (cloudfla <new custom string> 
+44: Re's Public Dns) <new custom string> 
+45: <new custom string> 
+46: Testing Lower_case Functi <new custom string> 
+47: On: <new custom string> 
+48: <new custom string> 
+49: 11. Convert All Lines To <new custom string> 
+50: Lowercase. <new custom string> 
+51: <new custom string> 
+52: Testing Uk_to_us Function <new custom string> 
+53: : <new custom string> 
+54: <new custom string> 
+55: 12. Convert Organization <new custom string> 
+56: To Organization. <new custom string> 
+57: 13. Sation Should Remain <new custom string> 
+58: Unchanged If Not At The E <new custom string> 
+59: Nd. <new custom string> 
+60: <new custom string> 

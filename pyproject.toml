@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "atk-training-pritam-wf-dynamic-loader"
+version = "0.1.1"
+description = ""
+authors = ["Pritam Chowdhury <pritam@aganitha.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.1"
+typer = "^0.9.0"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "prod"
+url = "https://pypi.aganitha.ai/"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "dev"
+url = "https://dev-pypi.aganitha.ai/"
+priority = "supplemental"
+
+
+[tool.poetry.scripts]
+atk-pritam-wf-dynamic-loader = "atk_training_pritam_wf_dynamic_loader.commands:stream_app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

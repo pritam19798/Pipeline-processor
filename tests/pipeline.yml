@@ -1,0 +1,12 @@
+pipeline:
+   - stream_lower_case
+   - coalesce_empty_lines
+   - stream_uk_to_us
+   - break_lines:
+      kwargs: # Use a kwargs dictionary to pass arguments
+         max_length: 25
+   - number_the_lines
+   - stream_capitalized
+   - custom_function
+
+

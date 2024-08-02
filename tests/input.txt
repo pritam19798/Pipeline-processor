@@ -1,0 +1,40 @@
+# test_input.txt
+
+
+
+
+This is a test input file for the processing functions.
+
+Lines with various characters, numbers, and symbols.
+
+Some examples:
+
+1. Line with special characters: !@#$%^&*()
+2. Line with numbers: 1234567890
+3. Line with mixed content: abcd123!@#$
+
+Testing edge cases and different scenarios:
+
+4. Line with stop words: a an the and or (should be removed)
+5. Empty line (should not affect the result)
+
+Testing capitalize function:
+
+6. lowercase words should be Capitalized
+7. WORDS IN UPPERCASE SHOULD STAY THE SAME
+8. Mixed CaSe WoRdS
+
+Testing fetch_geo_ip function:
+
+9. IP: 8.8.8.8 (Google's public DNS)
+10. IP: 1.1.1.1 (Cloudflare's public DNS)
+
+Testing lower_case function:
+
+11. Convert all lines to lowercase.
+
+Testing uk_to_us function:
+
+12. Convert organisation to organization.
+13. sation should remain unchanged if not at the end.
+
