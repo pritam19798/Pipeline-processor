@@ -1,6 +1,6 @@
 from logging import Logger
 from typing import List, Dict, Iterator, Callable, Optional, Any
-from atk_training_pritam_wf_dynamic_loader.base_clases import BaseFunctionRepository, BaseProcessor, BaseIoHandler, \
+from PipelineProcessor.base_clases import BaseFunctionRepository, BaseProcessor, BaseIoHandler, \
     BaseConfigLoader
 
 

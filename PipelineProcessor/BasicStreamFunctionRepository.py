@@ -1,5 +1,5 @@
 from typing import Callable, Iterator, Optional, Dict, Any
-from atk_training_pritam_wf_dynamic_loader.BasicFunctionRepository import BasicFunctionRepository
+from PipelineProcessor.BasicFunctionRepository import BasicFunctionRepository
 
 
 class BasicStreamBasicFunctionRepository(BasicFunctionRepository):

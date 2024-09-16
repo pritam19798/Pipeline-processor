@@ -1,22 +1,21 @@
-# Your Project Name
-atk-training-pritam-wf-dynamic-loader
+# PipelineProcessor
 
 ## Overview
 
-Framework for training wf projects using classes and objects
+Framework for processing text pipeline using classes and objects
 
 ## Installation
 
 poetry installation
 ```bash
-poetry add atk-training-pritam-wf-dynamic-loader
+poetry add PipelineProcessor
 ```
 
 ## Usage
 Use in command line
 
 ```bash
-#Usage: atk-pritam-wf-dynamic-loader [OPTIONS] INPUT_FILENAME YML_PATH
+#Usage: PipelineProcessor [OPTIONS] INPUT_FILENAME YML_PATH
 
 #Arguments:
 #  INPUT_FILENAME  [required]
@@ -34,7 +33,7 @@ Use in command line
 
 # example usage
 
-atk-pritam-wf-dynamic-loader  /path/to/input /path/to/pipeline --additional-function-path /path/to/additional_functions --output-filename /path/to/output
+PipelineProcessor  /path/to/input /path/to/pipeline --additional-function-path /path/to/additional_functions --output-filename /path/to/output
 ```
 
 ## Sample pipeline.yml file
@@ -83,11 +82,11 @@ If you want to extend the functionality, you can add or update with your custom 
 # Instantiate  FileHandler, Processor and FunctionRepositories
 import logging
 from logging import Logger
-from atk_training_pritam_wf_dynamic_loader.StreamFunctionRepository import StreamFunctionRepository
-from atk_training_pritam_wf_dynamic_loader.FileHandler import FileHandler
-from atk_training_pritam_wf_dynamic_loader.Processor import Processor
-from atk_training_pritam_wf_dynamic_loader.BasicStreamFunctionRepository import BasicStreamBasicFunctionRepository
-from atk_training_pritam_wf_dynamic_loader.YmlConfigLoader import YmlConfigLoader
+from PipelineProcessor.StreamFunctionRepository import StreamFunctionRepository
+from PipelineProcessor.FileHandler import FileHandler
+from PipelineProcessor.Processor import Processor
+from PipelineProcessor.BasicStreamFunctionRepository import BasicStreamBasicFunctionRepository
+from PipelineProcessor.YmlConfigLoader import YmlConfigLoader
 
 # logging
 logger: Logger = logging.getLogger()

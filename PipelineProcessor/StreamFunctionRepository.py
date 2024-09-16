@@ -1,4 +1,4 @@
-from atk_training_pritam_wf_dynamic_loader.base_clases import BaseFunctionRepository
+from PipelineProcessor.base_clases import BaseFunctionRepository
 from typing import Iterator
 
 

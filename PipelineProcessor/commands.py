@@ -4,12 +4,12 @@ import sys
 import logging
 from logging import Logger
 
-from atk_training_pritam_wf_dynamic_loader.BasicFunctionRepository import BasicFunctionRepository
-from atk_training_pritam_wf_dynamic_loader.BasicStreamFunctionRepository import BasicStreamBasicFunctionRepository
-from atk_training_pritam_wf_dynamic_loader.FileHandler import FileHandler
-from atk_training_pritam_wf_dynamic_loader.Processor import Processor
-from atk_training_pritam_wf_dynamic_loader.StreamFunctionRepository import StreamFunctionRepository
-from atk_training_pritam_wf_dynamic_loader.YmlConfigLoader import YmlConfigLoader
+from PipelineProcessor.BasicFunctionRepository import BasicFunctionRepository
+from PipelineProcessor.BasicStreamFunctionRepository import BasicStreamBasicFunctionRepository
+from PipelineProcessor.FileHandler import FileHandler
+from PipelineProcessor.Processor import Processor
+from PipelineProcessor.StreamFunctionRepository import StreamFunctionRepository
+from PipelineProcessor.YmlConfigLoader import YmlConfigLoader
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 app = typer.Typer()

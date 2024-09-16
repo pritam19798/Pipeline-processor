@@ -4,7 +4,7 @@ from logging import Logger
 from importlib.machinery import SourceFileLoader
 from inspect import isfunction, getmembers
 from typing import Iterator, Optional, Dict, Callable, Any
-from atk_training_pritam_wf_dynamic_loader.base_clases import BaseIoHandler
+from PipelineProcessor.base_clases import BaseIoHandler
 
 
 class FileHandler(BaseIoHandler):

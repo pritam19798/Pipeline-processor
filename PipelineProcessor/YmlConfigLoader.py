@@ -3,7 +3,7 @@ from typing import List, Tuple, Dict, Any
 
 import yaml
 
-from atk_training_pritam_wf_dynamic_loader.base_clases import BaseConfigLoader
+from PipelineProcessor.base_clases import BaseConfigLoader
 
 
 class YmlConfigLoader(BaseConfigLoader):
