@@ -355,7 +355,17 @@ h2 = ["h2 (>=4,<5)"]
 socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
+[[package]]
+name = "yml"
+version = "0.0.1"
+description = "A fast, safe, pure Python YAML and JSON parser"
+optional = false
+python-versions = "*"
+files = [
+    {file = "yml-0.0.1.tar.gz", hash = "sha256:5168010f8cfd91fbcda1d0bffae869a1117050bf8cf0e909d4f00ccd9bd80ab9"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "dececeef610e0ca3aedc10242d357a31b381d4b7c9753978738ad89956ce7b30"
+content-hash = "ce468f12d2963f25cb77a0f2b579f97aa576298cdf1f0d350ddf1de10d60cdb8"
