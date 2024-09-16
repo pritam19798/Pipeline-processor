@@ -5,9 +5,28 @@ from PipelineProcessor.base_clases import BaseFunctionRepository, BaseProcessor,
 
 
 class Processor(BaseProcessor):
+    """
+    A class responsible for processing data using a series of functions defined in function repositories.
+    It handles data input/output through specified handlers and configures processing steps based on a configuration loader.
+
+    Attributes:
+        logger (Logger): Logger object for logging information.
+        io_handler (BaseIoHandler): An IO handler to manage input and output operations.
+        config_loader (BaseConfigLoader): A configuration loader to manage processing steps and their configurations.
+        function_repositories (List[BaseFunctionRepository]): A list of function repositories to pull processing functions from.
+    """
+
     def __init__(self, *, logger: Logger, io_handler: BaseIoHandler, config_loader: BaseConfigLoader,
                  function_repositories: List[BaseFunctionRepository]):
+        """
+        Initializes the Processor with specified logger, IO handler, configuration loader, and function repositories.
 
+        Args:
+            logger (Logger): The logger instance.
+            io_handler (BaseIoHandler): The IO handler for managing input and output.
+            config_loader (BaseConfigLoader): The configuration loader to get processing steps.
+            function_repositories (List[BaseFunctionRepository]): The list of repositories containing processing functions.
+        """
         # logging
         self.logger = logger
 
@@ -25,7 +44,13 @@ class Processor(BaseProcessor):
         self.argument_list: Dict[str, Dict] = {}
 
     def process(self, functions: List[str], **kwargs) -> None:
+        """
+        Processes data sequentially using a list of function names from the function_lookup.
 
+        Args:
+            functions (List[str]): List of function names to apply.
+            kwargs: Additional keyword arguments to pass to the functions.
+        """
         # Read lines using FileHandler
         lines = self.io_handler.read_input()
         processed_lines: List[str] = []
@@ -39,7 +64,7 @@ class Processor(BaseProcessor):
                         raise TypeError(f"Function '{func_name}' not found in available functions.")
 
             except Exception as err:
-                self.logger.error(f"an error occurred stopping the execution of processor.\nerror: {err}")
+                self.logger.error(f"An error occurred stopping the execution of processor.\nerror: {err}")
                 break
             finally:
                 processed_lines.append(line)
@@ -48,7 +73,14 @@ class Processor(BaseProcessor):
 
     def stream_process(self, functions: List[str] = None,
                        additional_function_path: Optional[str] = None, **kwargs) -> None:
+        """
+        Processes data using a stream approach, potentially loading additional functions dynamically.
 
+        Args:
+            functions (List[str]): Optional list of additional function names to apply.
+            additional_function_path (Optional[str]): Path to load additional functions from.
+            kwargs: Additional keyword arguments to pass to the functions.
+        """
         # Read lines using IoHandler
         processed_lines = self.io_handler.read_input()
 
@@ -88,13 +120,26 @@ class Processor(BaseProcessor):
 
     def _update_function_to_lookup(self, name: str,
                                    func: Callable[[Iterator[str], Optional[Dict[str, Any]]], Iterator[str]]) -> None:
+        """
+        Updates or adds a function to the function lookup.
+
+        Args:
+            name (str): The name of the function to add or update.
+            func (Callable): The function to add or update in the lookup.
+        """
         if name not in self.function_lookup:
             self.function_lookup[name] = func
         else:
             self.logger.info(f"function {name} already present in function lookup")
 
     def _populate_functions_from_pipeline(self):
+        """
+        Populates the function list from the pipeline configuration loaded by the config loader.
+        """
         self.function_list = self.config_loader.load_pipeline_steps()
 
     def _populate_functions_and_arguments_from_pipeline(self):
+        """
+        Populates both the function list and the argument list from the pipeline configuration loaded by the config loader.
+        """
         self.function_list, self.argument_list = self.config_loader.load_pipeline_steps_with_arguments()
