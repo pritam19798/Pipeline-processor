@@ -2,8 +2,15 @@
 
 ## Overview
 
-Framework for processing text pipeline using classes and objects
+**PipelineProcessor** is a powerful framework designed for processing text pipelines using classes and objects. It provides an easy-to-use interface for transforming text data through a series of customizable functions.
 
+## Features
+- **Modular Design**: Easily extendable with custom functions.
+- **YAML Configuration**: Define processing steps in a structured YAML format.
+- **Command Line Interface**: Convenient usage through command line with various options.
+- **Extensibility**: Add or update functionality through custom functions tailored to specific needs.
+
+  
 ## Installation
 
 poetry installation
